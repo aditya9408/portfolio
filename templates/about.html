@@ -1,0 +1,157 @@
+{% load static %}
+<section id="about" class="py-3 text-white" style="padding-top: 100px;">
+  <div class="container">
+    <!-- Gradient Small Heading -->
+    <div class="d-flex justify-content-center">
+      <p class="text-uppercase mt-4 fw-semibold text-center"
+         style="letter-spacing: 0.2em;
+                background: linear-gradient(to right, #6ee7b7, #38bdf8);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;">
+        Explore More
+      </p>
+    </div>
+
+    <!-- Large Serif Heading -->
+    <h2 class="pt-serif-regular text-center mt-3 fw-bold display-5" style="font-family: 'Georgia', serif;">
+      About Me
+    </h2>
+
+    <!-- Sub-description -->
+    <p class="text-center lead text-white-50 mt-3 mx-auto" style="max-width: 600px;">
+      Know more about who I am, my skills, and what inspires me.
+    </p>
+
+    <!-- Main About Text -->
+    <div class="mt-7 mx-auto text-center" style="max-width: 850px;">
+      <p class="font-host-grotesk fs-5 fw-light lh-lg px-4" data-aos="fade-up" data-aos-duration="1200">
+        I'm Aditya Vishwakarma, a backend developer passionate about building scalable and efficient web systems using Django, Flask, and PostgreSQL.
+        I love transforming ideas into reliable APIs and seamless experiences. Writing clean, maintainable code and exploring new technologies keeps me motivated. I'm also into frontend Development using HTML, CSS, BootStrap
+        Whether it’s optimizing performance or designing robust architectures, I aim to deliver meaningful impact through code.
+      </p>
+    </div>
+
+  </div>
+</section>
+<!--My TechStack-->
+<section id="techstack" class="py-5 text-white" style="padding-top: 100px;">
+  <div class="container text-center">
+    <h2 class="fw-semibold display-5 mb-5" style="font-family: 'Host Grotesk', sans-serif;">My TechStack</h2>
+    <div class="tech-bar-wrapper position-relative overflow-hidden py-4">
+      <div class="tech-bar d-flex gap-4 py-3">
+        <!-- Repeat icons to create infinite scroll -->
+        <!-- Each icon -->
+        <!-- Add your images to "assets/icons/" folder and ensure correct paths -->
+        <!-- You can use Bootstrap classes for responsiveness -->
+
+        <!-- Example tech item -->
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill bg-black bg-opacity-70">
+          <img src="{% static 'html.png' %}" alt="HTML" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">HTML</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill bg-black bg-opacity-75">
+          <img src="{% static 'css.png' %}" alt="CSS" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">CSS</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill bg-black bg-opacity-75">
+          <img src="{% static 'bootstrap.png' %}" alt="Bootstrap" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Bootstrap</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill bg-black bg-opacity-75">
+          <img src="{% static 'C++.png' %}" alt="c++" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">C++</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill bg-black bg-opacity-75">
+          <img src="{% static 'django.png' %}" alt="django" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Django</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill bg-black bg-opacity-75">
+          <img src="{% static 'flask.png' %}" alt="flask" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Flask</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill bg-black bg-opacity-75">
+          <img src="{% static 'git.png' %}" alt="git" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Git</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill ">
+          <img src="{% static 'github.png' %}" alt="HTML" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">GitHub</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill ">
+          <img src="{% static 'seaborn.png' %}" alt="seaborn" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Seaborn</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill ">
+          <img src="{% static 'python.png' %}" alt="python" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Python</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill">
+          <img src="{% static 'scikit-learn.png' %}" alt="scikit-learn" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Scikit-learn</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill ">
+          <img src="{% static 'powerbi.png' %}" alt="powerbi" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">PowerBI</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill ">
+          <img src="{% static 'postgresql.png' %}" alt="postgresql" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">postgresql</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill ">
+          <img src="{% static 'pandas.png' %}" alt="pandas" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Pandas</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill ">
+          <img src="{% static 'numpy.png' %}" alt="numpy" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Numpy</span>
+        </div>
+        <div class="tech-item d-inline-flex align-items-center px-4 py-2 rounded-pill ">
+          <img src="{% static 'matplotlib.png' %}" alt="matplotlib" class="me-3" width="32" height="32">
+          <span class="text-white-50 fw-medium" style="font-family: 'Host Grotesk', sans-serif;">Matplotlib</span>
+        </div>
+
+
+        <!-- Repeat the above block for each tech -->
+        <!-- Add multiple sets (use JavaScript to clone if desired) -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add your fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  .tech-bar-wrapper {
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .tech-bar {
+    animation: moveLeft 4s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+
+  @keyframes moveLeft {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .tech-item {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent dark */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.05); /* subtle border */
+  transition: transform 0.3s ease;
+}
+.tech-item:hover {
+  transform: scale(1.05); /* optional: grow on hover */
+}
+
+</style>

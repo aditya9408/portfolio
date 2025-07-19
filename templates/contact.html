@@ -1,0 +1,169 @@
+{% load static %}
+<section id="contact" class="py-3 text-white mt-5" style="padding-top: 10px">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <p
+        class="text-uppercase mt-4 fw-semibold text-center"
+        style="
+          letter-spacing: 0.2em;
+          background: linear-gradient(to right, rgb(206, 221, 77), #38bdf8);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        "
+      >
+        <span style="margin-right: 0.5em">&#10022;</span> Connect with me
+      </p>
+    </div>
+    <div style="text-align: center">
+      {# This div will center its inline-level children #}
+      <div
+        class="d-inline-flex align-items-center justify-content-center mt-3 mb-0" {# Adjusted mt-5 to mt-3, and added mb-0 #}
+        style="
+          background-color: #000;
+          border: 1px solid #fff;
+          border-radius: 12px;
+          padding: 0.5rem 1rem;
+          position: relative;
+        "
+      >
+        <div
+          class="position-relative d-flex justify-content-center align-items-center me-2"
+          style="width: 25px; height: 12px; flex-shrink: 0"
+        >
+          <div
+            style="
+              background-color: rgb(27, 183, 48);
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              position: relative;
+              z-index: 2;
+            "
+          ></div>
+          <div
+            style="
+              background-color: rgb(71, 202, 89);
+              opacity: 1;
+              width: 11px;
+              height: 11px;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              animation: ping 1s infinite;
+              z-index: 1;
+            "
+          ></div>
+        </div>
+        <span class="fw-semibold" style="font-size: 0.75rem;">Available to Work</span>
+      </div>
+    </div>
+  </div>
+
+
+<section class="secondary-contact-section py-10 text-white text-center position-relative overflow-hidden" {# Renamed section for clarity #}>
+  <div class="background-gradient-overlay"></div> {# Gradient for this section #}
+  <div class="container position-relative z-index-2">
+    <h2 class="pt-serif-regular display-5 fw-bold mt-6 mb-4">Let's start a project together</h2> 
+    {# Social Icons #}
+    <style>
+        .social-icons a { color: #fff; transition: color .3s ease; }
+        .social-icons a:hover { color: #1F816B; }
+      </style>
+      <div class="d-flex justify-content-center gap-4 mt-4 social-icons">
+  <a href="https://github.com/aditya9408" target="_blank" rel="noopener noreferrer" class="fs-4">
+    <i class="bi bi-github"></i>
+  </a>
+  <a href="https://www.instagram.com/_.aditya._.04/" target="_blank" rel="noopener noreferrer" class="fs-4">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&to=vishwakarma9408@gmail.com" target="_blank" rel="noopener noreferrer" class="fs-4">
+    <i class="bi bi-envelope-fill"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/adityavishwakarma04/" target="_blank" rel="noopener noreferrer" class="fs-4">
+  <i class="bi bi-linkedin"></i>
+</a>
+</div>
+  </div>
+</section>
+</section>
+
+{# Footer Section #}
+<footer class="position-relative overflow-hidden">
+  <div class="position-absolute bottom-0 start-50 translate-middle-x"style="height: 400px; width: 1600px; background-color: rgba(54, 184, 113, 0.3); -webkit-mask-image: radial-gradient(50% 50% at bottom center, black, transparent); mask-image: radial-gradient(50% 50% at bottom center, black, transparent); z-index: -1;">
+  </div>
+  <div class="container">
+    <div class="border-top border-white-15 py-4 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3"> 
+      <div class="text-white-40 text-center w-100">© 2025. All rights reserved.</div> 
+      </nav>
+    </div>
+  </div>
+</footer>
+<style>
+ /* General Body/Background */
+body {
+    background-color: #0a0f1a; /* Dark background to match screenshot */
+    font-family: Arial, sans-serif; /* Or your preferred font */
+    color: white;
+}
+
+/* New section for "Connect with me" and "Available to Work" */
+#contact { /* This corresponds to the first section in contact.html */
+    min-height: auto;
+    /* padding-top: 120px; - This is already inline on the HTML element */
+    padding-bottom: 4rem; /* Adjusted for desired spacing */
+    background-color: #0a0f1a;
+}
+
+#contact .d-inline-flex { /* For the "Available to Work" box */
+    margin-top: 1rem !important; /* Reduced for closer spacing to "Connect with me" */
+    margin-bottom: 0;
+}
+
+/* Secondary Contact Section (containing "Let's start a project together" and social icons) */
+.secondary-contact-section { /* This corresponds to the second section in contact.html */
+    /* Removed min-height */
+    padding-top: 4rem; /* Adjusted for desired spacing */
+    padding-bottom: 12rem; /* Ensure enough padding at the bottom of the section */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top */
+    align-items: center;
+    background-color: #0a0f1a;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* FOOTER SECTION */
+/* The main footer structure does not have a specific class in the provided HTML.
+   If you had `.footer-section` on the `<footer>` tag itself, you'd put basic footer styles here.
+   However, the gradient and centering are handled by other classes and inline styles.
+   Let's ensure the `footer` element has basic background.
+*/
+footer {
+    background-color: #0d0d1a; /* Assuming this is the desired background for the footer */
+}
+
+/* Custom classes for Bootstrap to mimic Tailwind colors/borders where no direct equivalent */
+.border-white-15 {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.text-white-40 {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Keyframe for "ping" animation (used by the "Available to Work" dot) */
+@keyframes ping {
+    0% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+</style>

@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand fixed-top py-3 navbar-animate">
+  <div class="container d-flex justify-content-center">
+    <ul class="nav nav-pills custom-nav-pills p-1 border border-white border-opacity-25 rounded-pill">
+      <li class="nav-item">
+        <a class="nav-link active" href="#hero">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.custom-nav-pills .nav-link');
+    const sections = document.querySelectorAll('section[id]');
+    
+    // IMPORTANT: Adjust this offset value carefully.
+    // It should be roughly the height of your fixed navbar, plus a small buffer.
+    // Experiment with values like 70, 80, 90.
+    const scrollOffset = 80; 
+
+    function activateNavLink() {
+        let currentActiveSectionId = null;
+        const scrollY = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        // 1. Prioritize the very end of the page for 'contact'
+        // This ensures 'contact' is active when truly at the bottom, even if the section is short.
+        const scrollBottom = scrollY + viewportHeight;
+        const buffer = 5; // Small buffer for bottom detection
+        if (scrollBottom >= documentHeight - buffer) {
+            currentActiveSectionId = 'contact';
+        } else {
+            // 2. Find the active section based on scroll position
+            // Iterate in reverse to ensure the highest visible section gets priority.
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = sections[i];
+                const sectionTop = section.offsetTop - scrollOffset; // Adjust section's top by the offset
+
+                // If the current scroll position is at or past the adjusted top of the section
+                // AND not yet past the very bottom of the section (prevents flickering when leaving)
+                if (scrollY >= sectionTop) { // This is simpler and usually more effective
+                    currentActiveSectionId = section.id;
+                    break; // Found the active section, exit loop
+                }
+            }
+        }
+
+        // Apply/remove 'active' class
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentActiveSectionId) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Initial activation on page load
+    activateNavLink();
+
+    // Event listener for scrolling
+    window.addEventListener('scroll', activateNavLink);
+
+    // Smooth scrolling for nav links (optional, but good for UX)
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - scrollOffset, // Account for fixed navbar
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+</script>
+
